@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="purple">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111415">
+  <meta name="description" content="Prystech Webview. An interactive Linux-inspired desktop for exploring our design, development, and selected work.">
+  <title>Prystech Webview | Your creative workspace</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brand.css">
+  <script defer src="assets/lucide.min.js"></script>
+  <script defer src="js/config.js"></script>
+  <script defer src="js/core.js"></script>
+  <script defer src="js/api.js"></script>
+  <script defer src="js/windows.js"></script>
+  <script defer src="js/apps.js"></script>
+  <script defer src="js/terminal.js"></script>
+  <script defer src="js/desktop.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#desktop-icons">Skip to applications</a>
+  <div id="boot" class="boot" role="dialog" aria-modal="true" aria-label="Prystech system startup" tabindex="-1">
+    <div class="boot-inner">
+      <div class="boot-brand"><div><img class="boot-logo" src="assets/prystech-logo.svg" alt="Prystech" width="299" height="57"><span class="boot-systems">SYSTEMS / WEBVIEW 1.0</span></div></div>
+      <div class="boot-meta">PRYSTECH OS <span>SESSION INITIALIZATION</span></div>
+      <div id="boot-lines" class="boot-lines" aria-live="off"></div>
+      <div class="boot-progress"><div id="boot-progress"></div></div>
+      <div class="boot-footer"><button id="skip-boot">Press any key to skip <span class="cursor-block"></span></button><span id="boot-uptime">0.0s</span></div>
+    </div>
+    <span class="boot-copyright">A little different by design.</span>
+  </div>
+  <div id="desktop" class="desktop" inert>
+    <header class="system-bar">
+      <div class="system-left"><button id="launcher-toggle" class="brand-button" aria-label="Prystech applications" aria-expanded="false" aria-controls="launcher"><img class="header-logo" src="assets/prystech-logo.svg" alt="" width="105" height="20"><i data-lucide="chevron-down"></i></button><span class="bar-divider"></span><span id="active-app-label">Terminal</span></div>
+      <button id="clock-button" class="clock-button" aria-label="Open calendar"><time id="system-clock"></time></button>
+      <div class="system-right"><span class="workspace-number" aria-label="Workspace 1">1</span><span class="bar-divider"></span><button id="system-toggle" class="system-indicators" aria-label="System settings" aria-expanded="false" aria-controls="quick-settings"><i id="network-icon" data-lucide="wifi"></i><i id="volume-icon" data-lucide="volume-2"></i><i data-lucide="battery-full"></i><span>100%</span><i data-lucide="chevron-down"></i></button></div>
+    </header>
+    <main id="workspace" class="workspace" aria-label="Prystech desktop">
+      <h1 class="sr-only">Prystech Webview</h1>
+      <div class="wallpaper" aria-hidden="true"></div>
+      <nav id="desktop-icons" class="desktop-icons" aria-label="Desktop applications"></nav>
+      <div class="desktop-signature" aria-hidden="true"><div class="signature-code"><span class="status-dot"></span> BUILT TO EXPLORE</div><img class="signature-logo" src="assets/prystech-logo.svg" alt="" width="299" height="57"><div class="signature-bottom">DESIGN. DEVELOP. DIFFERENT.<span>WEBVIEW / 01</span></div></div>
+      <div id="windows" class="windows"></div>
+      <div class="desktop-footer"><span><span class="status-dot"></span> guest session <span class="footer-separator">/</span> <span id="connection-label">connected</span></span><span>PRYSTECH SYSTEMS <span class="footer-separator">/</span> v1.0.0</span></div>
+    </main>
+    <nav id="dock" class="dock" aria-label="Application dock"></nav>
+    <section id="launcher" class="popover launcher" aria-label="Applications" hidden></section>
+    <section id="quick-settings" class="popover quick-settings" aria-label="Quick settings" hidden></section>
+    <section id="calendar" class="popover calendar" aria-label="Calendar" hidden></section>
+    <div id="notifications" class="notifications" role="status" aria-live="polite"></div>
+  </div>
+  <div id="shutdown-screen" class="shutdown-screen" hidden><img class="power-logo" src="assets/prystech-logo.svg" alt="Prystech" width="299" height="57"><h1>Session ended.</h1><p>Thanks for spending some time here.</p><button class="primary-button" id="power-on"><i data-lucide="power"></i>Power on</button></div>
+  <noscript><div class="noscript"><h1>Prystech Webview</h1><p>This interactive desktop needs JavaScript.</p><a href="https://prystech.co">Visit Prystech</a></div></noscript>
+</body>
+</html>

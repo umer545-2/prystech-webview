@@ -1,0 +1,7 @@
+{
+  "name": "prystech-webview",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Linux-inspired portfolio desktop, built with vanilla HTML, CSS, and JavaScript.",
+  "scripts": { "start": "node scripts/serve.cjs", "test": "node --test tests/core.test.cjs", "check": "node scripts/check.cjs" }
+}
